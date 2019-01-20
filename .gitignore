@@ -1,6 +1,6 @@
 .idea/
 .vscode/
-node_modules/
+front_end/node_modules/
 build
 .DS_Store
 *.tgz
