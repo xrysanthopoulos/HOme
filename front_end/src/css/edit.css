@@ -1,0 +1,113 @@
+.app {
+    background: orange;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center; }
+  
+  *:focus {
+    outline: none; }
+  
+  button {
+    cursor: pointer; }
+  
+  .add-remove_btn {
+    margin-top: 20px; }
+    .add-remove_btn .add-switch {
+      background-color: #4CAF50;
+      border-radius: 2px;
+      border: none;
+      color: #fff;
+      margin-right: 2px;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 36px; }
+    .add-remove_btn .remove-switch {
+      background-color: crimson;
+      border-radius: 2px;
+      border: none;
+      color: #fff;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 36px; }
+  
+  .title-modal {
+    color: #505050;
+    font-size: 26px; }
+  
+  .inputs .title-input {
+    padding: 0 25% 0 25%;
+    color: #505050;
+    text-align: left;
+    font-size: 2em; }
+  .inputs .input {
+    margin: auto;
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: antiquewhite;
+    width: 50%;
+    height: 40px;
+    font-size: 26px; }
+  .inputs .input:focus {
+    background-color: antiquewhite; }
+  
+  .table {
+    margin: auto; }
+    .table .title-table {
+      color: #505050;
+      font-size: 30px;
+      padding: 30px; }
+    .table .elements-table {
+      font-size: 22px;
+      color: #505050;
+      padding: 1vh;
+      background-color: #D8D8D8; }
+    .table .delete-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 25px;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      background-color: crimson; }
+    .table .delete-btn:hover {
+      background-color: red; }
+  
+  .added-msg {
+    color: green;
+    font-size: 26px;
+    text-align: center; }
+  
+  .add-btn {
+    float: right;
+    background-color: steelblue;
+    border-radius: 12px;
+    border: none;
+    color: #fff;
+    margin: 35px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px; }
+  
+  .close-btn {
+    float: left;
+    background-color: crimson;
+    border-radius: 12px;
+    border: none;
+    color: #fff;
+    margin: 35px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px; }
+  
+  /*# sourceMappingURL=edit.css.map */
+  

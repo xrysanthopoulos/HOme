@@ -1,0 +1,14 @@
+.switch-panel {
+    margin-top: 10em;
+    margin-bottom: 5em;
+    display: flex;
+    justify-content: center;
+    .switch-bean {
+        display: inline-block;
+        align-self: center;
+        width: 33.33%;
+        h3 {
+            text-align: center;
+        }
+    }
+    }

@@ -1,0 +1,24 @@
+{
+  "name": "HOme",
+  "version": "1.0.0",
+  "description": "Home dashboard controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xrysanthopoulos/HOme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "left-pad": "^1.3.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.11.0",
+    "react-router-dom": "^4.3.1"
+  }
+}

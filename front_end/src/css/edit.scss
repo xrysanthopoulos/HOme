@@ -1,0 +1,133 @@
+$modal-back-color: antiquewhite;
+$modal-text-color: #505050;
+.app {
+  background: orange;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+*:focus {
+  outline:none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.add-remove_btn {
+  margin-top: 20px;
+  .add-switch {
+    background-color: #4CAF50;
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    margin-right: 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 36px;
+  }
+
+  .remove-switch {
+    background-color: crimson;
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 36px;
+  }
+}
+
+.title-modal {
+  color: $modal-text-color;
+  font-size: 26px;
+}
+  .inputs {
+
+    .title-input {
+      padding: 0 25% 0 25%;
+      color: $modal-text-color;
+      text-align: left;
+      font-size: 2em;
+    }
+    .input {
+      margin: auto;
+      display: block;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 2px solid black;
+      background-color: $modal-back-color;
+      width: 50%;
+      height: 40px;
+      font-size: 26px;
+    }
+    .input:focus {
+      background-color: $modal-back-color;
+    }
+  }
+
+.table {
+  margin: auto;
+  .title-table {
+    color: $modal-text-color;
+    font-size: 30px;
+    padding: 30px;
+  }
+  .elements-table {
+    font-size: 22px;
+    color: $modal-text-color;
+    padding: 1vh;
+    background-color: #D8D8D8;
+  }
+  .delete-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    background-color: crimson;
+  }
+  .delete-btn:hover {
+    background-color: red;
+  }
+}
+
+.added-msg {
+  color: green;
+  font-size: 26px;
+  text-align: center;
+}
+
+  .add-btn {
+    float: right;
+    background-color: steelblue;
+    border-radius: 12px;
+    border: none;
+    color: #fff;
+    margin: 35px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+  }
+
+  .close-btn {
+    float: left;
+    background-color: crimson;
+    border-radius: 12px;
+    border: none;
+    color: #fff;
+    margin: 35px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+  }
+
