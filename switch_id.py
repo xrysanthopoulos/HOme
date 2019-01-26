@@ -2,53 +2,56 @@ import datetime
 import time
 import pymongo
 import json
+import RPi.GPIO as GPIO
 from bson.json_util import dumps
 
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 mydb = myclient["lampdb"]
 places = mydb["places"]
 
-switch_id = 0
-
-for x in places.find():
-  print(x)
-
-
-# GPIO.setmode(GPIO.BCM)
-# VALVE_1 = 2
-#VALVE_2 = 3
-#PUMP = 17
-# PUMP = 3
-# GPIO.setup(2, GPIO.OUT)
-# GPIO.setup(3, GPIO.OUT)
-# GPIO.setup(PUMP, GPIO.OUT)
-# GPIO.output(2, GPIO.HIGH)
-# GPIO.output(3, GPIO.HIGH)
-# GPIO.output(PUMP, GPIO.HIGH)
+GPIO.setmode(GPIO.BCM)
 
 def status():
   output = []
   for s in places.find():
     output.append({ 'switch': s['switch'], 'status': s['status'] })
-    # print(output)
   return output
     
 def switch(switch_id):
-    print("open", switch_id)
     open_valve(switch_id)
 
-# def change_status(details):
-
-# def close_valve(valve):
-    # GPIO.output(valve, GPIO.HIGH)
+def close_valve(switch_id):
+    GPIO.output(switch_id, GPIO.LOW)
 
 def open_valve(switch_id):
-  print(switch_id)
-  # GPIO.output(valve, GPIO.LOW)
+    #print(switch_id)
+    GPIO.output(switch_id, GPIO.HIGH)
+  
+def intialize():
+    details = status()
+    switches_len = len(details)
+    #print(switches_len)
+    for s in details:
+        switch_id = s.get('switch')
+        status_id = s.get('status')
+        GPIO.setup(switch_id, GPIO.LOW)
+    return switches_len
+        
 
+switches_len = intialize()
 while True:
-  details = status()
-  for s in details:
-    if s['status']==True:
-      switch_id = s['switch']
-      switch(switch_id)
+    details = status()
+    if switches_len != len(details):
+        print(switches_len)
+        switches_len = intialize()
+    for i in details:
+        switch_id = i.get('switch')
+        status_id = i.get('status')
+        #print(switch_id,status_id)
+        if status_id==True:
+            switch(switch_id)
+        if status_id==False:
+            close_valve(switch_id)
+              
+
+    

@@ -55,7 +55,9 @@ class Add extends React.Component {
                 }).then((res) => res.json())
                     .then((data) => console.log(data))
                     .catch((err) => console.log(err));
+// eslint-disable-next-line
                     {this.showModal()}
+                    // eslint-disable-next-line
                     {this.triggerMessage()}
                 } else {
                 alert("Error");
@@ -68,7 +70,7 @@ class Add extends React.Component {
                 <h1 className="title-modal">Add new switch.</h1>
                 <div className="inputs">
                     <Modal show={this.state.show} handleClose={this.hideModal} button={false}>
-                        <h4 className="added-msg">✅ Successful applied the new place. 😉</h4>
+                        <h4 className="added-msg">Successful applied the new place.</h4>
                     </Modal>
                     <h3 className="title-input">Place Name</h3>
                     <input className="input add-input" type="text" name="name" value={null} onChange={this.handleChangeName} placeholder="Switch Name"/>
