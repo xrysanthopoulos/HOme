@@ -12,3 +12,7 @@ yarn-debug.log*
 yarn-error.log*
 /.changelog
 .npm/
+__pycache__/
+app.pyc
+front_end/yarn.lock
+
